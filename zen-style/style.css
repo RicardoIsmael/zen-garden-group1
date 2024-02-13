@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Starixo;
+  src: url("../tools/fonts/Starixo.otf");
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url("../tools/fonts/Mint Type - Opinion Pro Condensed Light.otf");
+}
+h1 {
+  font-family: "Starixo";
+  color: #fff;
+  background-color: #2d4654;
+  font-size: 1.5em;
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Starixo";
+  letter-spacing: 1px;
+  color: #721817;
+  margin: 0;
+}
+
+h2 {
+  font-size: 4em;
+  text-align: left;
+}
+
+h3 {
+  font-size: 2.7em;
+}
+
+h4 {
+  font-size: 2em;
+}
+
+p {
+  font-family: "myFirstFont";
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #2d4654;
+}
+
+a {
+  text-decoration: none;
+  color: #721817;
+  border-bottom: 1px dotted #e8871e;
+}
+
+a:hover {
+  border-bottom: #b0b2b8;
+  background-color: #e8871e;
+}
+
+[role=banner] {
+  border: 2px solid #b1eb7e;
+  background-color: #f0e992;
+  padding: 8px 6px;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+[role=complementary] {
+  border: 2px solid #566a42;
+  background-color: #c7f6ca;
+  padding: 8px 6px;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  margin: 10px 10px;
+}
+[role=complementary] li {
+  list-style: none;
+}
+
+h3 {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.intro {
+  padding: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(#e8871e, #b0b2b8);
+  padding: 5%;
+}
+
+body {
+  font-family: "myFirstFont";
+  font-size: 85%;
+  background-color: #fff;
+  margin: 0;
+  padding: 1em;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */
