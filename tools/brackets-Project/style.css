@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    max-width: 600px;
+    height:auto;
+    margin:0 ;
+}
+
+.page-wrapper {
+
+    width: 600px;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 23px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 600px;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+}
+
+/*------------ section-parts----------*/
+.intro {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #445367;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color:rgb(249, 249, 155);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+
+header {
+    width: 100%;
+    height: 45px;
+    border: 3px solid blue;
+    color: #000;
+    font-size: 21px;
+    margin:0 0 3px 0;
+    display: grid;
+    grid-column: 1/4;
+
+}
+
+.preamble {
+    width: 100%;
+    height: 50px;
+    border: 3px solid rgb(153, 6, 153);
+    margin: 0 0 3px 0;
+    display: grid;
+    grid-column: 1/4;
+
+
+}
+
+.summary {
+    width:100%;
+    height: 50px;
+    border: 3px solid green;
+    display: grid;
+    grid-column: 1/4;
+
+}
+
+/*----------main supporting-parts-----------*/
+.main,
+.supporting {
+    display: grid;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid red;
+    text-align: center;
+    background-color:#aaebfb
+}
+
+.explanation {
+    width: 100%;
+    height: 50px;
+    margin:0 0 3px 0;
+    border: 3px solid brown;
+}
+
+.participation {
+    width: 100%;
+    height: 60px;
+    margin:0 0 3px 0;
+    border: 3px solid #008877;
+}
+
+.benefits {
+    width: 100%;
+    height: 40px;
+    margin:0 0 3px 0;
+    border: 3px solid #001223;
+}
+
+.requeriments {
+    width: 100%;
+    height: 35px;
+    margin:0 0 3px 0;
+    border: 3px solid #884400;
+}
+
+footer {
+    width: 100%;
+    height: 45px;;
+    border: 3px solid #334422;
+}
+/*----------------aside-parts-----------*/
+
+
+ .sidebar {
+    width: 100%;
+    height: auto;
+    padding:10px;
+    border-radius: 10px;
+   border: 3px solid #221132;
+   background-color: #dfd7f3;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    
+}
+
+.design-selection {
+    width: 100%;
+    height: 50px;
+    margin:0 0 3px 0;
+    border: 3px solid #221132;
+
+}
+
+.design-archives {
+    width: 100%;
+    height: 100%;
+    margin:0 0 3px 0;
+    border: 3px solid #226655;
+}
+
+.zen-resources {
+    width: 100%;
+    height: auto;
+    border: 3px solid #661144;
+}
+
+/*------------------------------------------------------------*/
+/*======================screen-large=========================*/
+
+@media screen and (min-width:38em){
+body{
+    margin:0 auto;
+    max-width: 1000px;
+}
+.page-wrapper{
+   width:100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+/*---------principal-box----------------*/
+.page-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/*------------box1- .intro------------------*/
+header{
+    height:auto;
+    grid-area: hd;
+}
+.preamble{
+    grid-area: pre;
+    border-radius:20%;
+}
+.summary{
+    grid-area: sum;
+    border-radius: 22%;
+}
+.intro{
+    height:8em;
+    display: grid;
+    grid-gap:20px;
+    grid-template-areas:
+    "hd   pre pre"
+    "hd  sum sum";
+    
+}
+/*-----------------box2-.supporting-------------*/
+
+.explanation{
+    height:70px;
+    grid-area: ex;
+}
+.participation{
+    height: 80px;
+    grid-area: par;
+}
+.benefits{
+    height: 120px;
+    grid-area: ben;
+}
+.requeriments{
+    height: 50px;
+    grid-area: req;
+}
+footer{
+    grid-area: foot;
+}
+.supporting{
+    display: grid;
+    gap:3px;
+    grid-template-areas: 
+    "ex ex ex ."
+    " . par par par"
+    "ben ben ben ."
+    ". req req req"
+    "foot foot foot foot";
+}
+/*------------box3-.wrapper----------------------*/
+.design-selection{
+    height: 100px;
+    grid-area: d-sel;
+}
+.design-archives{
+    height: 100px;
+    grid-area: d-arc;
+}
+.zen-resources{
+    height: 100px;
+    grid-area:zen ;
+}
+.wrapper{
+    display: grid;
+    gap:10px;
+    grid-template-areas:
+    "d-sel d-arc zen"
+    "d-sel d-arc zen"
+    "d-sel d-arc zen";
+
+}
+}
