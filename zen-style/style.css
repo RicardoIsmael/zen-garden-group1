@@ -23,16 +23,15 @@ h4 {
   font-family: "Starixo";
   letter-spacing: 1px;
   color: #721817;
-  margin: 0;
 }
 
 h2 {
-  font-size: 4em;
+  font-size: 2em;
   text-align: left;
 }
 
 h3 {
-  font-size: 2.7em;
+  font-size: 1.5em;
 }
 
 h4 {
@@ -41,7 +40,7 @@ h4 {
 
 p {
   font-family: "myFirstFont";
-  font-size: 1.5em;
+  font-size: 0.8em;
   font-weight: 500;
   color: #2d4654;
 }
@@ -57,30 +56,18 @@ a:hover {
   background-color: #e8871e;
 }
 
+li {
+  font-size: "myFirstFont";
+}
+
 [role=banner] {
   border: 2px solid #b1eb7e;
   background-color: #f0e992;
-  padding: 8px 6px;
   text-transform: uppercase;
   padding: 10px 5px;
   margin: 0 auto;
-  border-radius: 10px;
-}
-
-[role=complementary] {
-  border: 2px solid #566a42;
-  background-color: #c7f6ca;
-  padding: 8px 6px;
-  text-transform: uppercase;
-  padding: 10px 5px;
-  margin: 0 auto;
-  border-radius: 5px;
-  display: block;
   text-align: center;
-  margin: 10px 10px;
-}
-[role=complementary] li {
-  list-style: none;
+  width: 100%;
 }
 
 h3 {
@@ -88,26 +75,192 @@ h3 {
   text-align: center;
 }
 
-.intro {
-  padding: 5%;
+body {
+  width: 600px;
 }
 
+.page-wrapper {
+  max-width: 600px;
+  height: 100%;
+  font-size: 23px;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------section parts----------*/
+.intro {
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+}
+.intro header {
+  height: auto;
+  margin-bottom: 10px;
+  border: 3px solid #721817;
+  font-size: 21px;
+  border-radius: 10px;
+}
+.intro .preamble {
+  height: auto;
+  margin-bottom: 10px;
+  border: 3px solid #ff331f;
+  border-radius: 10px;
+  padding: 3px 5px;
+}
+.intro .summary {
+  height: auto;
+  margin-bottom: 10px;
+  border: 3px solid #e8871e;
+  border-radius: 10px;
+  padding: 3px 5px;
+}
+
+/*----------------main-parts----------------------*/
+.main {
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+}
+.main .main > div:nth-of-type(odd) {
+  border: 3px solid #721817;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+}
+.main .main > div:nth-of-type(even) {
+  border: 3px solid #2d4654;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+}
+.main footer {
+  border: 3px solid #ff331f;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+/*----------------aside-----------*/
+.wrapper {
+  font-family: "myFirstFont";
+  text-align: center;
+}
+
+.wrapper > div {
+  border: 3px solid #e8871e;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+/*==================large-screen=======================*/
+@media (min-width: 39em) {
+  body {
+    margin: 0 auto;
+    width: 1000px;
+  }
+  .page-wrapper {
+    display: block;
+    max-width: 1000px;
+    margin-top: 25px;
+  }
+  /*---------first-box----------------*/
+  .intro {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    grid-template-areas: "hd hd hd" "sum pre pre";
+  }
+  .intro header {
+    height: auto;
+    grid-area: hd;
+    border-radius: 10px;
+  }
+  .intro .preamble {
+    height: auto;
+    grid-area: pre;
+    border-radius: 10px;
+  }
+  .intro .summary {
+    height: auto;
+    grid-area: sum;
+  }
+  .intro div:nth-child(n), .intro header {
+    border-radius: 40% 5%/10% 30%;
+  }
+  /*-------------second-box-----------------*/
+  .supporting,
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-areas: "ex ex ex . ." ". par par par par" "ben ben req req req " "ben ben req req req " ". fot fot fot .";
+    gap: 20px;
+  }
+  .supporting div:nth-child(1),
+  .main div:nth-child(1) {
+    grid-area: ex;
+  }
+  .supporting div:nth-child(2),
+  .main div:nth-child(2) {
+    grid-area: par;
+  }
+  .supporting div:nth-child(3),
+  .main div:nth-child(3) {
+    grid-area: ben;
+    height: 15em;
+    align-self: center;
+  }
+  .supporting div:nth-child(4),
+  .main div:nth-child(4) {
+    grid-area: req;
+  }
+  .supporting div:nth-child(n), .supporting footer,
+  .main div:nth-child(n),
+  .main footer {
+    border: 3px solid #ff331f;
+    border-radius: 40% 5%/10% 30%;
+    padding: 10px;
+  }
+  .supporting footer,
+  .main footer {
+    grid-area: fot;
+  }
+  /*-----------thrid-box-------------*/
+  .wrapper {
+    display: grid;
+    grid-template-areas: "d-s da zen" "d-s da zen" "d-s da zen";
+  }
+  .wrapper .design-selection {
+    height: auto;
+    grid-area: d-s;
+  }
+  .wrapper .design-archives {
+    height: auto;
+    grid-area: da;
+  }
+  .wrapper .zen-resources {
+    height: auto;
+    grid-area: zen;
+  }
+  .wrapper div:nth-child(n) {
+    border-radius: 40% 5%/10% 30%;
+  }
+}
 * {
   box-sizing: border-box;
 }
 
 html {
-  background: linear-gradient(#e8871e, #b0b2b8);
-  padding: 5%;
-}
-
-body {
-  font-family: "myFirstFont";
-  font-size: 85%;
-  background-color: #fff;
-  margin: 0;
-  padding: 1em;
-  position: relative;
+  background-color: hsl(88, 44%, 89%);
 }
 
 /*# sourceMappingURL=style.css.map */

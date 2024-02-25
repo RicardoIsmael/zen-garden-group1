@@ -1,4 +1,224 @@
-.intro {
-    padding: 5%;
+@use "variables" as *;
+@use "atoms";
+@use "molecules";
+
+
+body{
+  width:600px;
+}
+.page-wrapper{
+  max-width:600px;
+  height:100%;
+  font-size: 23px;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*------------section parts----------*/
+
+.intro{
+  height: 100%;
+  border-radius:10px;
+  text-align: center;
+  display:block;
+  
+
+  header{
+  
+    height:auto;
+    margin-bottom:10px;
+    border:3px solid $color-thrid;
+    font-size: 21px;
+    border-radius:10px;
+    
   }
+  .preamble{
+    height:auto;
+    margin-bottom:10px;
+    border: 3px solid $color-fourth;
+    border-radius:10px;
+    padding: 3px 5px;
+    
+  }
+  .summary{ 
+    height:auto;
+    margin-bottom:10px;
+    border: 3px solid $color-fiveth;
+    border-radius:10px;
+    padding: 3px 5px;
+  }
+
+}
+
+/*----------------main-parts----------------------*/
+
+.main{
+  display:block;
+  border-radius:10px;
+  text-align: center;
+ 
+  .main > div:nth-of-type(odd){
+    border:3px solid $color-thrid;
+    border-radius:10px;
+    margin-bottom:10px;
+    padding: 3px 5px;
+    
+  }
+  .main > div:nth-of-type(even){
+    border:3px solid $color-one;
+    border-radius:10px;
+    margin-bottom:10px;
+    padding: 3px 5px;
+  }
+    footer{
+      border:3px solid $color-fourth;
+      border-radius:10px;
+      padding:8px;
+    }
+    
+  }
+
+/*----------------aside-----------*/
+
+.wrapper{
+  font-family: $font-secondary;
+  text-align: center;
+
+}
+  .wrapper > div{
+    border: 3px solid $color-fiveth;
+    margin:10px;
+    border-radius:10px
+    
+  }
+ li{
+      list-style: none;
+  }
+
+  /*==================large-screen=======================*/
+
+  @media (min-width:39em){
+   body{
+      margin:0 auto;
+      width: 1000px;
+    }
+    .page-wrapper{
+      display: block;
+     max-width:1000px;
+      margin-top: 25px;
+    }
+   
+    /*---------first-box----------------*/
+    .intro{
+      height:auto;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-rows: 1fr 1fr;
+      gap:15px;
+      grid-template-areas:
+      "hd hd hd"
+      "sum pre pre";
+
+      header{
+        height:auto;
+        grid-area: hd;
+        border-radius: 10px;
+      }
+
+      .preamble{
+        height: auto;
+        grid-area: pre;
+        border-radius:10px;
+      }
+
+      .summary{
+        height: auto;
+        grid-area: sum;
+      }
+      div:nth-child(n), header{
+        border-radius: 40% 5% / 10% 30%;
+      }
+    }
+    /*-------------second-box-----------------*/
+
+    .supporting,
+    .main{ 
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  
+      grid-template-areas: 
+      "ex ex ex . ."
+      ". par par par par"
+      "ben ben req req req "
+      "ben ben req req req "
+      ". fot fot fot .";
+      gap:20px;
+
+       div:nth-child(1){  
+      grid-area: ex;
+
+      }
+      
+       div:nth-child(2){
+        grid-area: par;
+      }
+
+       div:nth-child(3){
+       grid-area: ben; 
+       height:15em;
+       align-self: center;
+        
+      }
+
+       div:nth-child(4){
+        grid-area: req;
+        
+      }
+      div:nth-child(n), footer{
+        border: 3px solid $color-fourth;
+        border-radius: 40% 5% / 10% 30%;
+        padding:10px;
+      }
+
+      footer{
+        grid-area: fot;
+      }
+    }
+
+    /*-----------thrid-box-------------*/
+
+    .wrapper{
+      display:grid;
+      grid-template-areas:
+      "d-s da zen"
+      "d-s da zen"
+      "d-s da zen";
+
+      .design-selection{
+        height: auto;
+        grid-area: d-s;
+      }
+
+      .design-archives{
+        height:auto;
+        grid-area: da;
+      }
+
+      .zen-resources{
+        height:auto;
+        grid-area: zen;
+      }
+      div:nth-child(n){
+        border-radius: 40% 5% / 10% 30%;
+      }
+    
+    }
+  }
+
+
+
   

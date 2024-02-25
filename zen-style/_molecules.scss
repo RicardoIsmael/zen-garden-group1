@@ -7,20 +7,11 @@
  [role="banner"]{
     @include atoms.square($color1:#b1eb7e, $color2:#f0e992);
     @include atoms.uppercase;
-    border-radius:10px;
+    text-align: center;
+    width:100%;
+    
  }
 
- [role="complementary"]{
-   @include atoms.square($color1:#566a42, $color2:#c7f6ca);
-   @include atoms.uppercase;
-   border-radius:5px;
-   display: block;
-   text-align: center;
-   margin: 10px 10px;
-   li{
-      list-style: none;
-   }
- }
  h3{
    
    border-radius: 5px;
