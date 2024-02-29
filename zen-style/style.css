@@ -75,6 +75,22 @@ h3 {
   text-align: center;
 }
 
+.page-wrapper {
+  position: relative;
+}
+
+header {
+  background-image: url(../tools/Images/428097737_1050808266027002_2388398559896105113_n.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-size: cover;
+  z-index: 5;
+}
+
+header h2 {
+  text-align: center;
+}
+
 body {
   width: 600px;
 }
