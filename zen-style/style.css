@@ -6,10 +6,13 @@
   font-family: myFirstFont;
   src: url("../tools/fonts/Mint Type - Opinion Pro Condensed Light.otf");
 }
+header h2 {
+  -webkit-text-stroke: 0.1px #b0b2b8;
+}
+
 h1 {
   font-family: "Starixo";
   color: #fff;
-  background-color: #2d4654;
   font-size: 1.5em;
   display: inline-block;
   letter-spacing: 2px;

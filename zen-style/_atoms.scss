@@ -13,11 +13,14 @@
     background-color:$color2;
 }
 
+header h2 {
+    -webkit-text-stroke: .1px  $color-two ;
+}
 
 h1{
     font-family: $font-primary;
     color:$color-white;
-    background-color: $color-one;
+    // background-color: $color-one;
     font-size: 1.5em;
    display: inline-block;
     letter-spacing: 2px;
