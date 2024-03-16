@@ -3,12 +3,25 @@
 @use "molecules";
 @use "organisms" as o;
 
-* {
+/** {
     box-sizing: border-box;
-  }
-  html {
-    background-color:hsl(88,44%,89%);
   
+  }*/
+  
+  body{
+    width:1200px;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    margin:20px;
+    background-color:hsl(56, 92%, 75%);
+    background-image:
+    radial-gradient(circle, hsl(137, 55%, 58%) .1em, transparent .2em),
+   linear-gradient(135deg, rgb(251, 207, 125) .4rem,transparent .3rem,hsl(200, 88%, 70%) 25%, transparent 15%),
+   linear-gradient(-45deg,rgb(151, 180, 248) .2em, transparent .3em,hsl(55,67%,89%) 20%,transparent 15%);
+   background-size: 25px 25px;
+  background-position: 0 0, 0 0,3em 3em;
   }
+  
   
  

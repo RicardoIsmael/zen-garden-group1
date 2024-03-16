@@ -10,7 +10,7 @@
 header {
   background-image: url(../tools/Images/428097737_1050808266027002_2388398559896105113_n.jpg);
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   z-index: 5;
 }
@@ -19,10 +19,10 @@ header h2 {
 }
 
 body{
-  width:600px;
+  width:700px;
 }
 .page-wrapper{
-  max-width:600px;
+  max-width:580px;
   height:100%;
   font-size: 23px;
   font-weight: 600;
@@ -47,7 +47,7 @@ body{
   
     height:auto;
     margin-bottom:10px;
-    border:3px solid $color-thrid;
+    border:10px ridge $color-two;
     font-size: 21px;
     border-radius:10px;
     
@@ -55,18 +55,28 @@ body{
   .preamble{
     height:auto;
     margin-bottom:10px;
-    border: 3px solid $color-fourth;
+    border: 10px ridge $color-fourth;
     border-radius:10px;
     padding: 3px 5px;
+    background: white;
+    
     
   }
+  
   .summary{ 
-    height:auto;
     margin-bottom:10px;
-    border: 3px solid $color-fiveth;
+    border: 10px ridge $color-fourth;
+    background:white;
     border-radius:10px;
     padding: 3px 5px;
+    transition: 2s;
+    transition-delay: 2s;
+
+    &:hover{
+      @include atoms.box;
+    }
   }
+
 
 }
 
@@ -76,26 +86,27 @@ body{
   display:block;
   border-radius:10px;
   text-align: center;
- 
-  .main > div:nth-of-type(odd){
-    border:3px solid $color-thrid;
+  & > div{
+    border:10px ridge $color-two;
     border-radius:10px;
     margin-bottom:10px;
-    padding: 3px 5px;
-    
+    padding: 3px 5px;  
   }
-  .main > div:nth-of-type(even){
-    border:3px solid $color-one;
-    border-radius:10px;
-    margin-bottom:10px;
-    padding: 3px 5px;
-  }
+  
     footer{
-      border:3px solid $color-fourth;
-      border-radius:10px;
-      padding:8px;
+      padding:10px;
+      border-radius:25px;
+      background:$color-white;
+      & > a{
+        border-radius:10px;
+        padding:10px;
+        font-size: 26px;
+        color:$color-one;
+        margin:15px;
+      
+
+      } 
     }
-    
   }
 
 /*----------------aside-----------*/
@@ -106,7 +117,8 @@ body{
 
 }
   .wrapper > div{
-    border: 3px solid $color-fiveth;
+    border: 10px ridge $color-fiveth;
+    background:hsl(56, 64%, 96%);
     margin:10px;
     border-radius:10px
     
@@ -120,7 +132,7 @@ body{
   @media (min-width:39em){
    body{
       margin:0 auto;
-      width: 1000px;
+      width: 1200px;
     }
     .page-wrapper{
       display: block;
@@ -170,7 +182,7 @@ body{
       ". par par par par"
       "ben ben req req req "
       "ben ben req req req "
-      ". fot fot fot .";
+      " . fot fot fot .";
       gap:20px;
 
        div:nth-child(1){  
@@ -194,14 +206,19 @@ body{
         
       }
       div:nth-child(n), footer{
-        border: 3px solid $color-fourth;
-        border-radius: 40% 5% / 10% 30%;
+        border:10px ridge $color-fourth;
+       border-radius: 40% 5% / 10% 30%;
         padding:10px;
+        background-color: #fff;
       }
 
+      
       footer{
         grid-area: fot;
+
+
       }
+    
     }
 
     /*-----------thrid-box-------------*/
@@ -209,9 +226,9 @@ body{
     .wrapper{
       display:grid;
       grid-template-areas:
-      "d-s da zen"
-      "d-s da zen"
-      "d-s da zen";
+      " .  d-s d-s"
+      "da  da   . "
+      ".  zen  zen";
 
       .design-selection{
         height: auto;
@@ -229,6 +246,13 @@ body{
       }
       div:nth-child(n){
         border-radius: 40% 5% / 10% 30%;
+        padding:20px;
+        transition: 2s;
+        transition-delay: 2s;
+        
+        &:hover{
+          @include atoms.box;
+        }
       }
     
     }

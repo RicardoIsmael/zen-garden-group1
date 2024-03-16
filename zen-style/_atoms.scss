@@ -8,10 +8,18 @@
     padding: 10px 5px;
     margin: 0 auto;
 }
-@mixin square($color1, $color2 ){
-    border: 2px solid $color1;
-    background-color:$color2;
+@mixin box {
+    background:white;
+    border: 10px ridge $color-fiveth;
+    font-size: 26px;
+    font-weight: 600;
+    border-radius:20px;
+    transition: 1s;
+    transition-timing-function: ease;
+
 }
+
+
 
 header h2 {
     -webkit-text-stroke: .1px  $color-two ;
@@ -47,8 +55,8 @@ h4{
 }
 p{
     font-family: $font-secondary;
-    font-size: .8em;
-    font-weight: 500;
+    font-size: .9em;
+    font-weight: 600;
     color:$color-one;
 }
 a{
@@ -61,5 +69,5 @@ a:hover{
     background-color: $color-fiveth;
 }
 li{
-    font-size: $font-secondary;
+    font-family: $font-secondary;
 }
