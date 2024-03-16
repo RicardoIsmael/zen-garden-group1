@@ -1,20 +1,12 @@
  @use "variables" as *;
  @use "atoms" ;
 
-
-
-
  [role="banner"]{
     @include atoms.square($color1:#b1eb7e, $color2:#f0e992);
     @include atoms.uppercase;
     text-align: center;
     width:100%;   
  }
-
-.main::before {
-  content: url(../tools/Images/428012799_383285227655250_6593249909559050149_n.jpg);
-  background-size: 10px;
-}
 
  h3{
    border-radius: 5px;
