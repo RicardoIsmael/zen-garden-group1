@@ -71,32 +71,10 @@ li {
   width: 100%;
 }
 
-<<<<<<< HEAD
-/*.main::before {
-  content: url(../tools/Images/428012799_383285227655250_6593249909559050149_n.jpg);
-  background-size: 10px;
-}*/
-=======
->>>>>>> 0188baa1e6fd958505675621a06c7384481d6e5a
+
 h3 {
   border-radius: 5px;
   text-align: center;
-}
-
-.page-wrapper {
-  position: relative;
-}
-
-header {
-<<<<<<< HEAD
-  background-image: url(../tools/Images/428097737_1050808266027002_2388398559896105113_n.jpg);
-  background-repeat: no-repeat;
-  width: 100%;
-=======
-  width: 100vw;
->>>>>>> 0188baa1e6fd958505675621a06c7384481d6e5a
-  background-size: cover;
-  z-index: 5;
 }
 
 header h2 {
