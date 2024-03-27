@@ -9,11 +9,11 @@
   }*/
   
   body{
-    width:1200px;
+    width: unset;
     height: auto;
     display: flex;
     justify-content: center; 
-    margin:20px;
+    margin:0 auto;
     background-color:hsl(56, 92%, 75%);
     background-image:
     radial-gradient(circle, hsl(137, 55%, 58%) .1em, transparent .2em),

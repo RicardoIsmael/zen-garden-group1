@@ -1,43 +1,26 @@
 @use "variables" as *;
 
-
-
-
-@mixin uppercase{
-    text-transform: uppercase;
-    padding: 10px 5px;
-    margin: 0 auto;
+header{
+    background-color: $color-white;
 }
-@mixin box {
-    background:white;
-    border: 10px ridge $color-fiveth;
-    font-size: 26px;
-    font-weight: 600;
-    border-radius:20px;
-    transition: 1s;
-    transition-timing-function: ease;
-
-}
-
-
 
 header h2 {
-    -webkit-text-stroke: .1px  $color-two ;
+    -webkit-text-stroke: .2px  $color-two ;
 }
 
 h1{
-    font-family: $font-primary;
-    color:$color-white;
-    font-size: 1.5em;
+    font-family: $font-primary, sans-serif, 'Courier New', Courier, monospace;
+    color:$color-one;
+    font-size: 1.7em;
    display: inline-block;
     letter-spacing: 2px;
     padding: 5px;
-    border-radius:10px;
+    
 }
 h2,
 h3,
 h4{
-    font-family: $font-primary;
+    font-family: $font-primary, sans serif, 'Courier New', Courier, monospace;
     letter-spacing: 1px;
     color:$color-thrid;
     
@@ -47,20 +30,22 @@ h2{
     text-align:left;
 }
 h3{
-    font-size:1.5em ;
+    font-size:1.3em ;
+    border-radius: 5px;
+    text-align: center;
 }
 h4{
     font-size: 2em;
 }
 p{
-    font-family: $font-secondary;
+    font-family: $font-secondary, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: .9em;
     font-weight: 600;
     color:$color-one;
 }
 a{
     text-decoration: none;
-    color:$color-thrid;
+    color:$color-one;
     border-bottom:1px dotted $color-fiveth;
 }
 a:hover{
@@ -68,5 +53,6 @@ a:hover{
     background-color: $color-fiveth;
 }
 li{
-    font-family: $font-secondary;
+    font-family: $font-secondary, Arial, Helvetica, sans-serif;
 }
+

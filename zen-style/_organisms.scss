@@ -7,20 +7,17 @@
   position: relative;
   
 }
-header {
-  width: 100vw;
-  background-size: cover;
-  z-index: 5;
-}
+
 header h2 {
   text-align: center;
+  color: #404;
 }
 
 body{
-  width:700px;
+ width:600px;
 }
 .page-wrapper{
-  max-width:580px;
+  max-width:590px;
   height:100%;
   font-size: 23px;
   font-weight: 600;
@@ -39,10 +36,10 @@ body{
   border-radius:10px;
   text-align: center;
   display:block;
+  position:relative;
   
 
   header{
-  
     height:auto;
     margin-bottom:10px;
     border:10px ridge $color-two;
@@ -57,9 +54,13 @@ body{
     border-radius:10px;
     padding: 3px 5px;
     background: white;
-    
-    
+    &:hover{
+      @include molecules.headline;
+     
+    } 
+ 
   }
+
   
   .summary{ 
     margin-bottom:10px;
@@ -67,14 +68,12 @@ body{
     background:white;
     border-radius:10px;
     padding: 3px 5px;
-    transition: 2s;
-    transition-delay: 2s;
-
+    transition: .5s;
+    transition-timing-function: ease-in-out;
     &:hover{
-      @include atoms.box;
+      @include molecules.box;
     }
   }
-
 
 }
 
@@ -86,9 +85,14 @@ body{
   text-align: center;
   & > div{
     border:10px ridge $color-two;
+    background-color: $color-white;
     border-radius:10px;
     margin-bottom:10px;
-    padding: 3px 5px;  
+    padding: 3px 5px; 
+    
+    &:hover{
+      @include molecules.headline;
+    }
   }
   
     footer{
@@ -118,7 +122,10 @@ body{
     border: 10px ridge $color-fiveth;
     background:hsl(56, 64%, 96%);
     margin:10px;
-    border-radius:10px
+    border-radius:10px;
+    &:hover{
+      @include molecules.headline;
+    }
     
   }
  li{
@@ -129,8 +136,8 @@ body{
 
   @media (min-width:39em){
    body{
-      margin:0 auto;
-      width: 1200px;
+      margin: auto;
+      width: 1000px;
     }
     .page-wrapper{
       display: block;
@@ -207,16 +214,14 @@ body{
         border:10px ridge $color-fourth;
        border-radius: 40% 5% / 10% 30%;
         padding:10px;
-        background-color: #fff;
+        background-color:$color-white;
       }
 
       
       footer{
         grid-area: fot;
 
-
       }
-    
     }
 
     /*-----------thrid-box-------------*/
@@ -244,13 +249,10 @@ body{
       }
       div:nth-child(n){
         border-radius: 40% 5% / 10% 30%;
-        padding:20px;
+        padding:10px;
         transition: 2s;
         transition-delay: 2s;
         
-        &:hover{
-          @include atoms.box;
-        }
       }
     
     }

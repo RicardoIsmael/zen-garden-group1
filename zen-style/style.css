@@ -6,24 +6,27 @@
   font-family: myFirstFont;
   src: url("../tools/fonts/Mint Type - Opinion Pro Condensed Light.otf");
 }
+header {
+  background-color: #fff;
+}
+
 header h2 {
-  -webkit-text-stroke: 0.1px #b0b2b8;
+  -webkit-text-stroke: 0.2px #b0b2b8;
 }
 
 h1 {
-  font-family: "Starixo";
-  color: #fff;
-  font-size: 1.5em;
+  font-family: "Starixo", sans-serif, "Courier New", Courier, monospace;
+  color: #2d4654;
+  font-size: 1.7em;
   display: inline-block;
   letter-spacing: 2px;
   padding: 5px;
-  border-radius: 10px;
 }
 
 h2,
 h3,
 h4 {
-  font-family: "Starixo";
+  font-family: "Starixo", sans serif, "Courier New", Courier, monospace;
   letter-spacing: 1px;
   color: #721817;
 }
@@ -34,7 +37,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  border-radius: 5px;
+  text-align: center;
 }
 
 h4 {
@@ -42,7 +47,7 @@ h4 {
 }
 
 p {
-  font-family: "myFirstFont";
+  font-family: "myFirstFont", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.9em;
   font-weight: 600;
   color: #2d4654;
@@ -50,7 +55,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #721817;
+  color: #2d4654;
   border-bottom: 1px dotted #e8871e;
 }
 
@@ -60,33 +65,24 @@ a:hover {
 }
 
 li {
-  font-family: "myFirstFont";
+  font-family: "myFirstFont", Arial, Helvetica, sans-serif;
 }
 
-[role=banner] {
-  text-transform: uppercase;
-  padding: 10px 5px;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-}
-
-
-h3 {
-  border-radius: 5px;
-  text-align: center;
+.page-wrapper {
+  position: relative;
 }
 
 header h2 {
   text-align: center;
+  color: #404;
 }
 
 body {
-  width: 700px;
+  width: 600px;
 }
 
 .page-wrapper {
-  max-width: 580px;
+  max-width: 590px;
   height: 100%;
   font-size: 23px;
   font-weight: 600;
@@ -103,6 +99,7 @@ body {
   border-radius: 10px;
   text-align: center;
   display: block;
+  position: relative;
 }
 .intro header {
   height: auto;
@@ -119,23 +116,50 @@ body {
   padding: 3px 5px;
   background: white;
 }
+.intro .preamble:hover h3 {
+  color: #fff;
+  text-shadow: 2px 6px 1px #b0b2b8;
+  -webkit-text-stroke: 1px #2d4654;
+  font-size: 35px;
+  font-weight: 900;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+.intro .preamble:hover h3::before {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 0 50% 50% 0;
+  margin-right: 4px;
+  background: linear-gradient(to left, #2d4654, #b0b2b8);
+}
+.intro .preamble:hover h3::after {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 50% 0 0 50%;
+  margin-left: 4px;
+  background: linear-gradient(to right, #2d4654, #b0b2b8);
+}
 .intro .summary {
   margin-bottom: 10px;
   border: 10px ridge #ff331f;
   background: white;
   border-radius: 10px;
   padding: 3px 5px;
-  transition: 2s;
-  transition-delay: 2s;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .intro .summary:hover {
   background: white;
-  border: 10px ridge #e8871e;
+  border: 10px ridge #ff331f;
   font-size: 26px;
   font-weight: 600;
   border-radius: 20px;
-  transition: 1s;
-  transition-timing-function: ease;
+  transition: 0.5s;
+  transition-timing-function: ease-in;
 }
 
 /*----------------main-parts----------------------*/
@@ -146,9 +170,37 @@ body {
 }
 .main > div {
   border: 10px ridge #b0b2b8;
+  background-color: #fff;
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 3px 5px;
+}
+.main > div:hover h3 {
+  color: #fff;
+  text-shadow: 2px 6px 1px #b0b2b8;
+  -webkit-text-stroke: 1px #2d4654;
+  font-size: 35px;
+  font-weight: 900;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+.main > div:hover h3::before {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 0 50% 50% 0;
+  margin-right: 4px;
+  background: linear-gradient(to left, #2d4654, #b0b2b8);
+}
+.main > div:hover h3::after {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 50% 0 0 50%;
+  margin-left: 4px;
+  background: linear-gradient(to right, #2d4654, #b0b2b8);
 }
 .main footer {
   padding: 10px;
@@ -175,6 +227,33 @@ body {
   margin: 10px;
   border-radius: 10px;
 }
+.wrapper > div:hover h3 {
+  color: #fff;
+  text-shadow: 2px 6px 1px #b0b2b8;
+  -webkit-text-stroke: 1px #2d4654;
+  font-size: 35px;
+  font-weight: 900;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+.wrapper > div:hover h3::before {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 0 50% 50% 0;
+  margin-right: 4px;
+  background: linear-gradient(to left, #2d4654, #b0b2b8);
+}
+.wrapper > div:hover h3::after {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 50% 0 0 50%;
+  margin-left: 4px;
+  background: linear-gradient(to right, #2d4654, #b0b2b8);
+}
 
 li {
   list-style: none;
@@ -183,8 +262,8 @@ li {
 /*==================large-screen=======================*/
 @media (min-width: 39em) {
   body {
-    margin: 0 auto;
-    width: 1200px;
+    margin: auto;
+    width: 1000px;
   }
   .page-wrapper {
     display: block;
@@ -274,18 +353,9 @@ li {
   }
   .wrapper div:nth-child(n) {
     border-radius: 40% 5%/10% 30%;
-    padding: 20px;
+    padding: 10px;
     transition: 2s;
     transition-delay: 2s;
-  }
-  .wrapper div:nth-child(n):hover {
-    background: white;
-    border: 10px ridge #e8871e;
-    font-size: 26px;
-    font-weight: 600;
-    border-radius: 20px;
-    transition: 1s;
-    transition-timing-function: ease;
   }
 }
 /** {
@@ -293,11 +363,11 @@ li {
 
   }*/
 body {
-  width: 1200px;
+  width: unset;
   height: auto;
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 0 auto;
   background-color: hsl(56, 92%, 75%);
   background-image: radial-gradient(circle, hsl(137, 55%, 58%) 0.1em, transparent 0.2em), linear-gradient(135deg, rgb(251, 207, 125) 0.4rem, transparent 0.3rem, hsl(200, 88%, 70%) 25%, transparent 15%), linear-gradient(-45deg, rgb(151, 180, 248) 0.2em, transparent 0.3em, hsl(55, 67%, 89%) 20%, transparent 15%);
   background-size: 25px 25px;

@@ -1,16 +1,61 @@
  @use "variables" as *;
  @use "atoms" ;
 
- [role="banner"]{
-    @include atoms.uppercase;
-    text-align: center;
-    width:100%;   
- }
 
- h3{
-   border-radius: 5px;
-   text-align: center;
- }
+
+
+
+ @mixin uppercase{
+  text-transform: uppercase;
+  padding: 10px 5px;
+  margin: 0 auto;
+}
+@mixin box {
+  background:white;
+  border: 10px ridge $color-fourth;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius:20px;
+  transition: .5s;
+  transition-timing-function: ease-in;
+
+}
+@mixin headline{
+  h3{
+    color: $color-white;
+    text-shadow:2px 6px 1px $color-two;
+    -webkit-text-stroke: 1px $color-one;
+    font-size: 35px;
+    font-weight: 900;
+    transition: 1s;
+    transition-timing-function: ease-in-out; 
+  }
+  h3::before{
+    content:"";
+    display:inline-block;
+    width:calc(100% - 95%);
+    height: 2px;
+    border-radius:0 50% 50% 0 ;
+    margin-right:4px;
+    background:linear-gradient(to left,$color-one, $color-two);
+    
+    
+  }
+  h3::after{
+    content:"";
+    display:inline-block;
+    width:calc(100% - 95%);
+    height: 2px;
+    border-radius: 50% 0 0 50% ;
+    margin-left:4px;
+    background:linear-gradient(to right,$color-one, $color-two);
+  
+  }
+}
+
+  
+
+
 
  
 
