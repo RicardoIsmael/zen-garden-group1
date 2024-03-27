@@ -9,6 +9,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Zen Garden Redo"
+		"liveServer.settings.multiRootWorkspaceName": "Garden1",
+		"liveServer.settings.port": 5501
 	}
 }
