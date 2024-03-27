@@ -2,10 +2,10 @@
     font-family: Starixo;
     src: url('../tools/fonts/Starixo.otf');
   }
-  @font-face {
-    font-family: myFirstFont;
-    src: url('../tools/fonts/Mint\ Type\ -\ Opinion\ Pro\ Condensed\ Light.otf');
-  }
+@font-face {
+  font-family: myFirstFont;
+  src: url('../tools/fonts/Mint\ Type\ -\ Opinion\ Pro\ Condensed\ Light.otf');
+}
 
 $color-one: #2d4654;
 $color-two: #b0b2b8;
@@ -17,5 +17,3 @@ $color-white: #fff;
 $font-primary:"Starixo";
 $font-secondary:"myFirstFont";
 $large-screen:38em;
-
-
