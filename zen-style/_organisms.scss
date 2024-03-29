@@ -55,8 +55,7 @@ body{
     border: 10px ridge $color-fourth;
     border-radius:10px;
     padding: 3px 5px;
-<<<<<<< HEAD
-   // background:white;
+    background:white;
     &:hover{
       @include molecules.headline;
      
@@ -72,7 +71,6 @@ body{
     display: block;
     position: absolute;
     right: 50%;
->>>>>>> dfb95f49bac4a9a6998abf1921e88ad659adc6e0
   }
 
   
