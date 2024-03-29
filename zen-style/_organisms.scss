@@ -58,10 +58,8 @@ body{
     background:white;
     &:hover{
       @include molecules.headline;
-     
     } 
- 
-=======
+
     margin-bottom: 60vw;
   }
   .preamble::after {
