@@ -3,10 +3,6 @@
 @use "molecules";
 @use "organisms" as o;
 
-/** {
-    box-sizing: border-box;
-  
-  }*/
   
   body{
     width: unset;
@@ -14,11 +10,11 @@
     display: flex;
     justify-content: center; 
     margin:0 auto;
-    background-color:hsl(56, 92%, 75%);
+    background-color: hsl(231, 97%, 72%);
     background-image:
-    radial-gradient(circle, hsl(137, 55%, 58%) .1em, transparent .2em),
-   linear-gradient(135deg, rgb(251, 207, 125) .4rem,transparent .3rem,hsl(200, 88%, 70%) 25%, transparent 15%),
-   linear-gradient(-45deg,rgb(151, 180, 248) .2em, transparent .3em,hsl(55,67%,89%) 20%,transparent 15%);
+    radial-gradient(circle, hsl(250, 73%, 84%) .1em, transparent .2em),
+   linear-gradient(135deg, rgb(148, 211, 251) .4rem,transparent .3rem,hsl(200, 89%, 82%) 25%, transparent 15%),
+   linear-gradient(-45deg,rgb(180, 200, 245) .2em, transparent .3em,hsl(55, 48%, 95%) 20%,transparent 15%);
    background-size: 25px 25px;
   background-position: 0 0, 0 0,3em 3em;
   }
