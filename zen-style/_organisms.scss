@@ -55,23 +55,15 @@ body{
     border: 10px ridge $color-fourth;
     border-radius:10px;
     padding: 3px 5px;
-<<<<<<< HEAD
-
-   background:white;
-   margin-bottom: 60vw;
-
+    background:white;
+    margin-bottom: 60vw;
     background:white;
     &:hover{
       @include molecules.headline;
     } 
-
-
-
     margin-bottom: 60vw;
-
-
-   background:white;
-   margin-bottom: 60vw;
+    background:white;
+    margin-bottom: 60vw;
     &:hover{
       @include molecules.headline;
     } 
@@ -82,7 +74,10 @@ body{
     max-height: 600px;
     display: block;
     position: absolute;
-    right: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -5;
   }
 
   
