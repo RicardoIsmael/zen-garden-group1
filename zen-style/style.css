@@ -72,6 +72,10 @@ li {
   font-family: "myFirstFont", Arial, Helvetica, sans-serif;
 }
 
+abbr {
+  cursor: pointer;
+}
+
 .page-wrapper {
   position: relative;
 }

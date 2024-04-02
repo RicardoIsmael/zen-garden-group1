@@ -51,11 +51,14 @@
     background:linear-gradient(to right,$color-one, $color-two);
   }
 }
-
-  
-
-
-
- 
-
- 
+abbr {
+  cursor: pointer;
+}
+// abbr::after {
+//   content: ' What is that?';
+//   visibility: hidden;
+//   position: absolute;
+// }
+// abbr:after:hover {
+//   visibility: visible;
+// }
