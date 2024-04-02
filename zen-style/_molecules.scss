@@ -53,7 +53,21 @@
 }
 abbr {
   cursor: pointer;
+  position: relative;
+  transition: 0.5s;
 }
+
+abbr:hover::after {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  display: block;
+  padding: .5em;
+  background: $color-two;
+  border-radius: 15px;
+  content: attr(title);
+}
+
 // abbr::after {
 //   content: ' What is that?';
 //   visibility: hidden;

@@ -74,6 +74,19 @@ li {
 
 abbr {
   cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+abbr:hover::after {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  display: block;
+  padding: 0.5em;
+  background: #b0b2b8;
+  border-radius: 15px;
+  content: attr(title);
 }
 
 .page-wrapper {
