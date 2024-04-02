@@ -55,6 +55,21 @@ body{
     border: 10px ridge $color-fourth;
     border-radius:10px;
     padding: 3px 5px;
+<<<<<<< HEAD
+
+   background:white;
+   margin-bottom: 60vw;
+
+    background:white;
+    &:hover{
+      @include molecules.headline;
+    } 
+
+
+
+    margin-bottom: 60vw;
+
+
    background:white;
    margin-bottom: 60vw;
     &:hover{
@@ -233,7 +248,7 @@ body{
         
       }
       div:nth-child(n), footer{
-        border:10px ridge $color-fourth;
+        border:10px  $color-fourth;
        border-radius: 40% 5% / 10% 30%;
         padding:10px;
         background-color:$color-white;

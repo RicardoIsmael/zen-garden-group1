@@ -119,6 +119,37 @@ body {
   padding: 3px 5px;
   background: white;
   margin-bottom: 60vw;
+  background: white;
+  margin-bottom: 60vw;
+  background: white;
+  margin-bottom: 60vw;
+}
+.intro .preamble:hover h3 {
+  color: #fff;
+  text-shadow: 2px 6px 1px #b0b2b8;
+  -webkit-text-stroke: 1px #2d4654;
+  font-size: 35px;
+  font-weight: 900;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+.intro .preamble:hover h3::before {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 0 50% 50% 0;
+  margin-right: 4px;
+  background: linear-gradient(to left, #2d4654, #b0b2b8);
+}
+.intro .preamble:hover h3::after {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 2px;
+  border-radius: 50% 0 0 50%;
+  margin-left: 4px;
+  background: linear-gradient(to right, #2d4654, #b0b2b8);
 }
 .intro .preamble:hover h3 {
   color: #fff;
@@ -153,7 +184,10 @@ body {
   max-height: 600px;
   display: block;
   position: absolute;
-  right: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -5;
 }
 .intro .summary {
   margin-bottom: 60vw;
@@ -345,7 +379,7 @@ li {
     grid-area: req;
   }
   .supporting div:nth-child(n), .supporting footer, .main div:nth-child(n), .main footer {
-    border: 10px ridge #ff331f;
+    border: 10px #ff331f;
     border-radius: 40% 5%/10% 30%;
     padding: 10px;
     background-color: #fff;
