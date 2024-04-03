@@ -67,12 +67,3 @@ abbr:hover::after {
   border-radius: 15px;
   content: attr(title);
 }
-
-// abbr::after {
-//   content: ' What is that?';
-//   visibility: hidden;
-//   position: absolute;
-// }
-// abbr:after:hover {
-//   visibility: visible;
-// }
