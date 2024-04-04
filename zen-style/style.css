@@ -38,6 +38,7 @@ h2 {
 
 h3 {
   font-size: 1.3em;
+  overflow: auto;
   border-radius: 5px;
   text-align: center;
 }
@@ -72,6 +73,10 @@ li {
   font-family: "myFirstFont", Arial, Helvetica, sans-serif;
 }
 
+/*==============uppercase-mixin=============*/
+/*===============box-mixin = changes in the div elements=================*/
+/*================headline-mixin = changes in the shape of the headline==========*/
+/*===============================abbbr-mixin = changes with abbr===============*/
 abbr {
   cursor: pointer;
   position: relative;
@@ -89,6 +94,7 @@ abbr:hover::after {
   content: attr(title);
 }
 
+/*=======================key-frame mixin = animation=====================*/
 /*============================================================*/
 /*======================base-screen===========================*/
 /*============================================================*/
@@ -233,6 +239,7 @@ body {
   padding: 10px;
   border-radius: 25px;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
@@ -467,7 +474,7 @@ body {
     grid-template-areas: "hd hd hd" "sum pre pre";
   }
   .intro header {
-    height: 50vh;
+    height: 40vh;
     grid-area: hd;
     border-radius: 10px;
   }
@@ -545,8 +552,7 @@ body {
 body {
   width: unset;
   height: auto;
-  display: flex;
-  justify-content: center;
+  display: block;
   margin: 0 auto;
   background-color: hsl(231, 97%, 72%);
   background-image: radial-gradient(circle, hsl(250, 73%, 84%) 0.1em, transparent 0.2em), linear-gradient(135deg, rgb(148, 211, 251) 0.4rem, transparent 0.3rem, hsl(200, 89%, 82%) 25%, transparent 15%), linear-gradient(-45deg, rgb(180, 200, 245) 0.2em, transparent 0.3em, hsl(55, 48%, 95%) 20%, transparent 15%);
