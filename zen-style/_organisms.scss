@@ -258,7 +258,7 @@ body {
 
 @media (min-width: $large-screen) {
   body {
-    margin: auto;
+    margin: 0 10;
     width: 1000px;
   }
   .page-wrapper {
@@ -279,7 +279,7 @@ body {
       "sum pre pre";
 
     header {
-      height: 40vh;
+      height: 300px;
       grid-area: hd;
       border-radius: 10px;
     }

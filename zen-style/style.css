@@ -456,7 +456,7 @@ body {
 /*======================================================*/
 @media (min-width: 58em) {
   body {
-    margin: auto;
+    margin: 0 10;
     width: 1000px;
   }
   .page-wrapper {
@@ -474,7 +474,7 @@ body {
     grid-template-areas: "hd hd hd" "sum pre pre";
   }
   .intro header {
-    height: 40vh;
+    height: 300px;
     grid-area: hd;
     border-radius: 10px;
   }
@@ -553,7 +553,7 @@ body {
   width: unset;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 5%;
   background-color: hsl(231, 97%, 72%);
   background-image: radial-gradient(circle, hsl(250, 73%, 84%) 0.1em, transparent 0.2em), linear-gradient(135deg, rgb(148, 211, 251) 0.4rem, transparent 0.3rem, hsl(200, 89%, 82%) 25%, transparent 15%), linear-gradient(-45deg, rgb(180, 200, 245) 0.2em, transparent 0.3em, hsl(55, 48%, 95%) 20%, transparent 15%);
   background-size: 25px 25px;
