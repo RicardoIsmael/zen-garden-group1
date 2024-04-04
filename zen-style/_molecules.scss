@@ -13,7 +13,7 @@
 @mixin box {
   background:white;
   border: 10px ridge $color-fourth;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   border-radius:20px;
   transition: .5s;
@@ -25,7 +25,7 @@
     color: $color-white;
     text-shadow:2px 6px 1px $color-two;
     -webkit-text-stroke: 1px $color-one;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 900;
     transition: 1s;
     transition-timing-function: ease-in-out; 
@@ -66,4 +66,13 @@ abbr:hover::after {
   background: $color-two;
   border-radius: 15px;
   content: attr(title);
+}
+
+@mixin key-frame-moving{
+@keyframes moving {
+  
+  0% {transform: rotate(0deg)}
+  50%{transform: rotate(360deg)}
+  100%{transform: rotate(0deg)}
+}
 }
