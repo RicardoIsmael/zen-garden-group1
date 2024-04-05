@@ -514,7 +514,7 @@ body {
     margin-top: 0px;
   }
   .intro .summary::after {
-    margin-top: -150vh;
+    margin-top: -250vh;
   }
   .intro .summary {
     height: auto;
