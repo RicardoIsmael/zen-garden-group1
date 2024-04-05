@@ -6,6 +6,7 @@ header{
 
 header h2 {
     -webkit-text-stroke: .2px  $color-two ;
+    margin-top: -3%;
 }
 
 h1{
@@ -44,9 +45,7 @@ p{
     font-weight: 600;
     color:$color-one;
 }
-.explanation p {
-    color: $color-white;
-}
+
 a{
     text-decoration: none;
     color:$color-one;
